@@ -8,7 +8,9 @@
 |------------|-------------|---------------|
 | [relayer-mcp](https://github.com/xns-cloud/relayer-mcp) | MCP server for XNS Relayer — install from npm: `npx @xns-cloud/relayer-mcp` | [scpcorp/relayer-mcp](https://gitlab.com/scpcorp/relayer-mcp) |
 | [xns-s5cmd](https://github.com/xns-cloud/xns-s5cmd) | S3-compatible CLI with XNS auth and MCP integration | [scpcorp/xns-s5cmd](https://gitlab.com/scpcorp/xns-s5cmd) |
-| [relayer-quickstart](https://github.com/xns-cloud/relayer-quickstart) | Docker Compose quickstart for XNS Relayer | [scpcorp/relayer-quickstart](https://gitlab.com/scpcorp/relayer-quickstart) |
+
+`relayer-quickstart` — a Docker Compose quickstart for XNS Relayer — is on its way and will be
+listed here once it lands.
 
 ## Contributing
 
