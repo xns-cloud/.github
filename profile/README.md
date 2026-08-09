@@ -1,19 +1,26 @@
 # XNS Cloud
 
-**Development happens on [GitLab](https://gitlab.com/scpcorp).** These GitHub repositories are read-only mirrors kept in sync automatically.
+S3-compatible distributed storage. **Development happens on [GitLab](https://gitlab.com/scpcorp)** —
+the repositories here are read-only mirrors, kept in sync automatically.
 
 ## What's here
 
-| Repository | Description | GitLab source |
-|------------|-------------|---------------|
-| [relayer-mcp](https://github.com/xns-cloud/relayer-mcp) | MCP server for XNS Relayer — install from npm: `npx @xns-cloud/relayer-mcp` | [scpcorp/relayer-mcp](https://gitlab.com/scpcorp/relayer-mcp) |
-| [xns-s5cmd](https://github.com/xns-cloud/xns-s5cmd) | S3-compatible CLI with XNS auth and MCP integration | [scpcorp/xns-s5cmd](https://gitlab.com/scpcorp/xns-s5cmd) |
+| Repository | What it is | Install / use | GitLab source |
+|------------|------------|---------------|---------------|
+| [relayer-mcp](https://github.com/xns-cloud/relayer-mcp) | MCP server for XNS Relayer — lets an AI agent drive XNS storage directly | `npx @xns-cloud/relayer-mcp` | [scpcorp/relayer-mcp](https://gitlab.com/scpcorp/relayer-mcp) |
+| [xns-s5cmd](https://github.com/xns-cloud/xns-s5cmd) | S3-compatible command-line client with XNS authentication | see the repo README | [scpcorp/xns-s5cmd](https://gitlab.com/scpcorp/xns-s5cmd) |
 
-`relayer-quickstart` — a Docker Compose quickstart for XNS Relayer — is on its way and will be
-listed here once it lands.
+More repositories join this list as they are published.
+
+## About XNS
+
+XNS Relayer is an S3-compatible gateway to distributed storage. It speaks the S3 API, so
+existing S3 tooling works against it unchanged. Learn more at [xns.tech](https://xns.tech).
 
 ## Contributing
 
-All issues, merge requests, and CI run on GitLab. If you'd like to contribute or report a bug, please visit the GitLab source repository linked above.
+Issues, merge requests, and CI all live on GitLab. To contribute or report a bug, open it on
+the GitLab source repository linked above.
 
-For `relayer-mcp` questions or issues, you may also use [GitHub Issues](https://github.com/xns-cloud/relayer-mcp/issues) — we monitor those.
+For `relayer-mcp`, you may also use [GitHub Issues](https://github.com/xns-cloud/relayer-mcp/issues) —
+those are monitored.
