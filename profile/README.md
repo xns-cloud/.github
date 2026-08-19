@@ -11,6 +11,18 @@ unchanged — more at [xns.tech](https://xns.tech).
 | [relayer-quickstart](https://github.com/xns-cloud/relayer-quickstart) | Quick-start for XNS Relayer — self-hosted S3-compatible storage, $0 egress. Docker Compose + setup. | `docker compose up` | [GitLab](https://gitlab.com/scpcorp/relayer-quickstart) |
 | [xns-s5cmd](https://github.com/xns-cloud/xns-s5cmd) | Parallel S3 CLI for XNS S3-compatible storage — s5cmd fork. | see the repo README | [GitLab](https://gitlab.com/scpcorp/xns-s5cmd) |
 
+## Cookbook recipes
+
+Each is a runnable script plus the architecture behind it, in
+[xns-ai-cookbooks](https://github.com/xns-cloud/xns-ai-cookbooks).
+
+| Recipe | What it does |
+|--------|--------------|
+| [Multimodal RAG](https://github.com/xns-cloud/xns-ai-cookbooks/tree/main/multimodal-rag) | Video speech and frames into transcripts and vision captions, cached in a bucket, then queried. |
+| [Agentic Document Parsing](https://github.com/xns-cloud/xns-ai-cookbooks/tree/main/agentic-doc-parsing) | PDFs and spreadsheets parsed locally with Docling, extracted to structured JSON, cached per document. |
+| [Fine-Tune Checkpointing](https://github.com/xns-cloud/xns-ai-cookbooks/tree/main/finetune-checkpointing) | Training checkpoints pushed to a bucket and recovered on a replacement GPU worker after preemption. |
+| [Agent Workspace](https://github.com/xns-cloud/xns-ai-cookbooks/tree/main/agent-workspace) | CrewAI agents exchanging artifacts through a shared bucket instead of through the prompt. |
+
 ## Where to open issues
 
 It depends on the row above.
