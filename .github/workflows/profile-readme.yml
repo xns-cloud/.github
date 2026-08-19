@@ -1,0 +1,45 @@
+name: profile README
+
+# The org profile table is generated from the org's actual public repositories,
+# so a new repo appears because it exists rather than because someone remembered.
+on:
+  schedule:
+    - cron: '17 13 * * *'   # 07:17 MDT / 06:17 MST — daily
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'profile/listing.json'
+      - 'profile/README.tmpl.md'
+      - 'scripts/build_profile_readme.py'
+      - '.github/workflows/profile-readme.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-readme
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Regenerate the table
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/build_profile_readme.py
+
+      - name: Commit if the repo list moved
+        run: |
+          if git diff --quiet -- profile/README.md; then
+            echo "no change"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/README.md
+          git commit -m "docs: regenerate org profile table from the public repo list"
+          git push

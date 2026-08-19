@@ -1,0 +1,11 @@
+{
+  "_comment": "Optional per-repo enrichment for the org profile table. Every public, non-archived repo in the org is listed whether or not it appears here; entries below only add detail. 'order' sorts (lower first, unset sorts last alphabetically). 'install' is rendered verbatim as markdown. 'gh_issues' marks a mirrored repo whose GitHub Issues are still monitored.",
+  "repos": {
+    "relayer-mcp":        { "order": 1, "install": "`npx @xns-cloud/relayer-mcp`", "gh_issues": true },
+    "langchain-xns":      { "order": 2, "install": "`pip install langchain-xns`" },
+    "xns-ai-cookbooks":   { "order": 3, "install": "clone and run" },
+    "relayer-quickstart": { "order": 4, "install": "`docker compose up`" },
+    "xns-s5cmd":          { "order": 5 }
+  },
+  "exclude": [".github"]
+}
