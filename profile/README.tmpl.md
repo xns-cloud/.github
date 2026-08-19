@@ -5,6 +5,18 @@ unchanged — more at [xns.tech](https://xns.tech).
 
 <!-- REPO-TABLE -->
 
+## Cookbook recipes
+
+Each is a runnable script plus the architecture behind it, in
+[xns-ai-cookbooks](https://github.com/xns-cloud/xns-ai-cookbooks).
+
+| Recipe | What it does |
+|--------|--------------|
+| [Multimodal RAG](https://github.com/xns-cloud/xns-ai-cookbooks/tree/main/multimodal-rag) | Video speech and frames into transcripts and vision captions, cached in a bucket, then queried. |
+| [Agentic Document Parsing](https://github.com/xns-cloud/xns-ai-cookbooks/tree/main/agentic-doc-parsing) | PDFs and spreadsheets parsed locally with Docling, extracted to structured JSON, cached per document. |
+| [Fine-Tune Checkpointing](https://github.com/xns-cloud/xns-ai-cookbooks/tree/main/finetune-checkpointing) | Training checkpoints pushed to a bucket and recovered on a replacement GPU worker after preemption. |
+| [Agent Workspace](https://github.com/xns-cloud/xns-ai-cookbooks/tree/main/agent-workspace) | CrewAI agents exchanging artifacts through a shared bucket instead of through the prompt. |
+
 ## Where to open issues
 
 It depends on the row above.
